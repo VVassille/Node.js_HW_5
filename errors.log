@@ -1,0 +1,18 @@
+2026-10-25T17:41:05.700Z - Error: Test server error
+    at Server.<anonymous> (file:///C:/Users/VASILE/Desktop/Node.js/NHW/Node.js_HW_5/task2.js:6:11)
+    at Server.emit (node:events:514:28)
+    at parserOnIncoming (node:_http_server:1293:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:125:17)
+
+2026-10-25T17:41:05.847Z - Error: Test server error
+    at Server.<anonymous> (file:///C:/Users/VASILE/Desktop/Node.js/NHW/Node.js_HW_5/task2.js:6:11)
+    at Server.emit (node:events:514:28)
+    at parserOnIncoming (node:_http_server:1293:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:125:17)
+
+2026-10-25T17:41:07.891Z - Error: Test server error
+    at Server.<anonymous> (file:///C:/Users/VASILE/Desktop/Node.js/NHW/Node.js_HW_5/task2.js:6:11)
+    at Server.emit (node:events:514:28)
+    at parserOnIncoming (node:_http_server:1293:12)
+    at HTTPParser.parserOnHeadersComplete (node:_http_common:125:17)
+
