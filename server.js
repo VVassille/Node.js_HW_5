@@ -1,25 +1,19 @@
 import http from "node:http";
-import fs from "node:fs";
 
 const server = http.createServer((req, res) => {
-  try {
-    // Generăm o eroare doar pentru testare
-    throw new Error("Eroare de test");
-  } catch (error) {
-    const logMessage = `${new Date().toISOString()} - ${error.stack}\n`;
+  const authorization = req.headers.authorization;
 
-    fs.appendFile("errors.log", logMessage, (err) => {
-      if (err) {
-        console.error("Nu s-a putut scrie în errors.log:", err);
-      }
-    });
+  res.setHeader("Content-Type", "text/plain");
 
-    res.statusCode = 500;
-    res.setHeader("Content-Type", "text/plain");
-    res.end("Internal Server Error");
+  if (!authorization) {
+    res.statusCode = 401;
+    res.end("Unauthorized");
+  } else {
+    res.statusCode = 200;
+    res.end("Authorization header received");
   }
 });
 
 server.listen(3000, () => {
-  console.log("Serverul rulează pe portul 3000");
+  console.log("Server is running on http://localhost:3000");
 });
